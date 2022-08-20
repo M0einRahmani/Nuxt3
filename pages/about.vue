@@ -1,13 +1,10 @@
 <template>
-<div>
-  <Title>درباره ی ما</Title>
-  This is about page
-  <img src="Wallpaper - NuxtJS Crash Course.jpg" alt="image">
-</div>
+  <div class="container mx-auto w-1/2 py-8">
+    <Title>درباره ی ما | {{ title }}</Title>
+    About Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid corporis delectus dolorem doloribus ea eaque explicabo, illo ipsa ipsam, libero necessitatibus obcaecati quae quam, quos reprehenderit sed voluptates voluptatibus.
+  </div>
 </template>
 
 <script setup>
-definePageMeta({
-  layout : "custom",
-})
+const title = useState('title')
 </script>

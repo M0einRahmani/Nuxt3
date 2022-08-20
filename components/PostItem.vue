@@ -1,0 +1,26 @@
+<template>
+  <div class="post-container py-8">
+    <h3 class="text-3xl font-bold">
+      <NuxtLink :to="`/posts/${props.post.id}`">{{ props.post.title }}</NuxtLink>
+    </h3>
+    <div class="post-meta text-gray-700 flex items-center space-x-2 space-x-reverse">
+      <div>{{ props.post.created_at }}</div>
+      <div>&middot;</div>
+      <div>{{ props.post.user.name }}</div>
+    </div>
+    <div class="post-preview leading-relaxed mt-4">
+      {{ props.post.body }}
+    </div>
+    <div class="mt-4">
+      <NuxtLink :to="'/posts/1'" class="bg-blue-700 hover:bg-blue-800 text-white rounded inline-block px-4 py-2">
+        بیشتر بخوانید
+      </NuxtLink>
+    </div>
+  </div>
+</template>
+
+<script setup>
+  const props = defineProps({
+    post: Object,
+  })
+</script>
