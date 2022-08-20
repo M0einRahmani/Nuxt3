@@ -13,7 +13,7 @@
           <ul class="flex space-x-12 space-x-reverse">
             <li><NuxtLink to="/">خانه</NuxtLink></li>
             <li><NuxtLink to="/about">درباره ی ما</NuxtLink></li>
-            <li><NuxtLink to="/contact-us">ارتباط با ما</NuxtLink></li>
+<!--            <li><NuxtLink to="/contact-us">ارتباط با ما</NuxtLink></li>-->
           </ul>
         </div>
       </div>
