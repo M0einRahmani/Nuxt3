@@ -5,7 +5,7 @@
       <NuxtLink :to="'/posts/1'">{{ post.title }}</NuxtLink>
     </h3>
     <div class="post-meta text-gray-700 flex items-center space-x-2 space-x-reverse">
-      <div>{{ post.created_at }}</div>
+      <div>{{ format(new Date(post.created_at), 'MMMM dd, yyyy') }}</div>
       <div>&middot;</div>
       <div>{{ post.user.name }}</div>
     </div>
@@ -16,6 +16,7 @@
 </template>
 
 <script setup>
+import { format } from 'date-fns'
 const title = useState('title', ()=> 'وبلاگ Nuxt 3')
 const route = useRoute()
 // const { data :post } = await useFetch(`http://127.0.0.1:8000/api/posts/${route.params.id}`)
